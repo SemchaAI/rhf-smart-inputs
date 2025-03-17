@@ -1,54 +1,50 @@
-# React + TypeScript + Vite
+# RHF Smart Inputs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive collection of smart form input components built with React Hook Form, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Main idea
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project demonstrates various form input components with advanced features like masking, validation, multi-select, file uploads, and more. Mostly all components have default UI version for reusability outside forms and also version with React Hook Form for efficient form state management and validation.
 
-## Expanding the ESLint configuration
+# Skeleton for any form component
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```
+import { useForm } from "react-hook-form";
+import { Form } from "./Form";
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+export const FormContacts = () => {
+  const form = useForm<T>({
+    defaultValues: {  },
+    mode: "onBlur",
+  });
+  const submitHandler = async (data: T) => {
+    try {
+      console.log("DataForm", data);
+    } catch (error) {
+      console.log("[DataForm]", error);
+    }
+  };
+
+  return (
+    <Form form={form} onSubmit={submitHandler}>
+      {
+        //from fields input,textarea checkboxes e.t.c.
+      }
+      {
+        //controls:  submit, mb some links or any other ui
+      }
+    </Form>
+  );
+};
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- 🔒 **Smart Password Fields** - Toggle visibility, validation
+- 📱 **Input Masking** - Phone numbers, formatted text
+- ✅ **Validation** - Built-in validation patterns
+- 📁 **File Uploads** - Multi-file upload with preview
+- 📋 **Multi-select** - Searchable dropdown with multiple selection
+- ☑️ **Checkboxes & Radio Buttons** - Custom styled form controls
+- 📝 **Text Areas** - With validation
+- 🌙 **Dark/Light Theme** - Theme switching support
