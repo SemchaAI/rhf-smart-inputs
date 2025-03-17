@@ -1,12 +1,13 @@
 # RHF Smart Inputs
 
 A comprehensive collection of smart form input components built with React Hook Form, TypeScript, and Tailwind CSS.
+🚀 **Live Demo:** [RHF Smart Inputs](https://rhf-smart-inputs.vercel.app/)
 
-## Main idea
+# Main idea
 
 This project demonstrates various form input components with advanced features like masking, validation, multi-select, file uploads, and more. Mostly all components have default UI version for reusability outside forms and also version with React Hook Form for efficient form state management and validation.
 
-# Skeleton for any form component
+## Skeleton for any form component
 
 ```
 import { useForm } from "react-hook-form";
