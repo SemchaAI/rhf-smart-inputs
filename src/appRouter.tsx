@@ -7,6 +7,7 @@ import {
   LoginPage,
   ProductAdminPage,
   RegisterPage,
+  SimpleInputsPage,
 } from "./pages";
 import { ROUTES } from "./utils/config";
 
@@ -37,9 +38,14 @@ export const appRouter = () =>
           element: <GenderFormPage />,
         },
         {
+          path: ROUTES.SIMPLE_INPUTS,
+          element: <SimpleInputsPage />,
+        },
+        {
           path: ROUTES.ADMIN_PRODUCTS,
           element: <ProductAdminPage />,
         },
+
         {
           path: "*",
           element: <div>404</div>,
