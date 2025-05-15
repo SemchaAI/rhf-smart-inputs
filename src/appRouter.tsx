@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 
 import { createBrowserRouter } from "react-router-dom";
 import { BaseLayout } from "./layouts/BaseLayout";
@@ -15,11 +15,7 @@ const ProductAdminPage = lazy(() => import("./pages/ProductAdminPage"));
 export const appRouter = () =>
   createBrowserRouter([
     {
-      element: (
-        <Suspense fallback={<>loading</>}>
-          <BaseLayout />
-        </Suspense>
-      ),
+      element: <BaseLayout />,
       errorElement: <div>error</div>,
       children: [
         {
