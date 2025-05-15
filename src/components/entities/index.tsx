@@ -11,3 +11,4 @@ export { Navigation } from "./navigation/Navigation";
 export { MobileNavigation } from "./navigation/MobileNavigation";
 
 export { DeleteModal } from "./modals/DeleteModal";
+export { UserModalForm } from "./modals/UserFormModal";
