@@ -10,6 +10,8 @@ interface ButtonProps
 
 export const Button = ({
   variant = "primary",
+  size,
+  rounded,
   loading = false,
   disabled,
   className,
@@ -20,7 +22,7 @@ export const Button = ({
 
   return (
     <button
-      className={button({ variant, className })}
+      className={button({ variant, rounded, size, className })}
       disabled={isDisabled}
       {...props}
     >
