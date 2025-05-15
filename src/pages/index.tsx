@@ -4,3 +4,5 @@ export { RegisterPage } from "./RegisterPage";
 export { ContactsPage } from "./ContactsPage";
 export { GenderFormPage } from "./GenderFormPage";
 export { ProductAdminPage } from "./ProductAdminPage";
+
+export { SimpleInputsPage } from "./SimpleInputsPage";

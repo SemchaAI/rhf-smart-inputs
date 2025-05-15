@@ -6,6 +6,7 @@ export {
 } from "./selects/MultiSelect";
 export { MultiSelectField } from "./selects/MultiSelectField";
 export { FieldInput } from "./inputs/FieldInput";
+export { FieldUnmaskedInput } from "./inputs/FieldUnmaskedInput";
 export { RadioFieldList } from "./inputs/RadioFieldList";
 export { CheckboxField } from "./inputs/CheckboxField";
 export { TextArea } from "./inputs/TextArea";
