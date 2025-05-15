@@ -2,6 +2,7 @@ import { Modal } from "@/components/features";
 // import { Button } from "@/components/shared";
 import { useModal } from "@/utils/hooks";
 import { IResponse } from "@/models/response";
+import { Button } from "@/components/shared";
 // import toast from "react-hot-toast";
 
 interface IProps<T extends number | string> {
@@ -50,15 +51,9 @@ export const DeleteModal = <T extends number | string>({
         <div className="flex flex-col gap-4">
           <p className="text-xl font-semibold">{title}</p>
           <p className="text-base">{confirmText}</p>
-          <button
-            className="text-secondary w-full bg-error px-2 py-1"
-            onClick={handleDelete}
-          >
+          <Button variant="danger" onClick={handleDelete}>
             Delete
-          </button>
-          {/* <Button variant="danger" onClick={handleDelete}>
-            Delete
-          </Button> */}
+          </Button>
         </div>
       </Modal>
     </>
