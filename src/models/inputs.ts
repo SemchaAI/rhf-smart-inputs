@@ -15,6 +15,19 @@ export interface IField extends IInput {
   placeholder: string;
   name: string;
 }
+
+export interface IUnmaskedField extends IInput {
+  id: string;
+  EyeIcon?: boolean;
+  Icon: React.FC<React.SVGProps<SVGSVGElement>>;
+
+  hidden?: boolean;
+  label: string;
+  type: string;
+  placeholder?: string;
+  defaultValue?: string;
+}
+
 export interface ICheckbox
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "onChange"> {
   name: string;
