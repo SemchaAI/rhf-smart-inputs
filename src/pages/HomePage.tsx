@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 //   technologies: Option[];
 // };
 // DEFAULT EXAMPLE OF USING MULTISELECT
-export const HomePage = () => {
+export default function HomePage() {
   const [options, setOptions] = useState<Option[]>([]);
   const [selected, setSelected] = useState<string[]>([]);
 
@@ -58,4 +58,4 @@ export const HomePage = () => {
       </Container>
     </section>
   );
-};
+}

@@ -1,7 +1,7 @@
 import { ProductForm } from "@/components/entities";
 import { Container } from "@/components/shared";
 
-export const ProductAdminPage = () => {
+export default function ProductAdminPage() {
   return (
     <section>
       <Container>
@@ -12,4 +12,4 @@ export const ProductAdminPage = () => {
       </Container>
     </section>
   );
-};
+}

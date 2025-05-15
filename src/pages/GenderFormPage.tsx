@@ -1,7 +1,7 @@
 import { CheckBoxRadioButtonsForm } from "@/components/entities";
 import { Container } from "@/components/shared";
 
-export const GenderFormPage = () => {
+export default function GenderFormPage() {
   return (
     <section>
       <Container>
@@ -14,4 +14,4 @@ export const GenderFormPage = () => {
       </Container>
     </section>
   );
-};
+}
