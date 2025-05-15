@@ -6,13 +6,10 @@ import { FieldUnmaskedInput } from "@/components/features";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { type userBaseSchema, UserBaseSchema } from "@/utils/config/zod";
+import type { IUserFormProps } from "@/models/zodForms";
+import { Button } from "@/components/shared";
 
-interface IProps {
-  type: "Create" | "Update";
-  formData?: Partial<userBaseSchema>;
-}
-
-export const FormSimpleInputs = ({ formData, type }: IProps) => {
+export const FormSimpleInputs = ({ formData, type }: IUserFormProps) => {
   const form = useForm({
     resolver: zodResolver(UserBaseSchema),
     defaultValues: {
@@ -56,7 +53,7 @@ export const FormSimpleInputs = ({ formData, type }: IProps) => {
   return (
     <Form form={form} onSubmit={submitHandler}>
       {
-        <div className="flex w-full flex-col gap-2">
+        <div className="grid grid-cols-1 gap-x-4 gap-y-1 sm:grid-cols-2 lg:grid-cols-3">
           <FieldUnmaskedInput
             id="name"
             label="User name:"
@@ -102,15 +99,15 @@ export const FormSimpleInputs = ({ formData, type }: IProps) => {
         </div>
       }
       {
-        <div className="border-b border-border pt-2 pb-4">
-          <button
+        <div className="pt-2 pb-4">
+          <Button
+            size="full"
+            variant="outline"
             aria-label="sign up"
             type="submit"
-            // version="outline"
-            // size="full"
           >
-            Sign up
-          </button>
+            Submit
+          </Button>
         </div>
       }
     </Form>
