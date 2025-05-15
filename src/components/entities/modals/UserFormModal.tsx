@@ -25,12 +25,9 @@ export const UserModalForm = ({ type, formData, button }: IProps) => {
         {button}
       </button>
       <Modal isOpen={isOpen} onClose={close}>
-        {isOpen && (
-          <Suspense fallback={<div className="p-4">Loading form...</div>}>
-            <h1 className="text-3xl text-center">User Form</h1>
-            <FormSimpleInputs type={type} formData={formData} onClose={close} />
-          </Suspense>
-        )}
+        <Suspense fallback={<div>Loading...</div>}>
+          <FormSimpleInputs type={type} formData={formData} />
+        </Suspense>
       </Modal>
     </>
   );
