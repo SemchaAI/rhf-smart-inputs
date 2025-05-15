@@ -8,6 +8,7 @@
 
   /* Feedback Colors */
   --error: #EA4335;              /* Error messages */
+  --error-highlight: #E53935;
   --warning: #F2994A;            /* Warnings */
   --success: #34A853;            /* Success messages */
 
@@ -89,6 +90,7 @@
 
   /* Feedback Colors */
   --color-error: var(--error);
+  --color-error-highlight: var(--error-highlight);
   --color-warning: var(--warning);
   --color-success: var(--success);
 
