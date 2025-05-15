@@ -1,5 +1,5 @@
-import { FieldValues, FormProvider, UseFormReturn } from 'react-hook-form';
-import type { ReactNode } from 'react';
+import { FieldValues, FormProvider, UseFormReturn } from "react-hook-form";
+import type { ReactNode } from "react";
 
 interface DynamicFormProps<T extends FieldValues> {
   form: UseFormReturn<T>;
@@ -17,7 +17,8 @@ export const Form = <T extends FieldValues>({
   return (
     <FormProvider {...form}>
       <form
-        className="min-w-80 max-w-lg my-12 mx-auto w-full"
+        //className="min-w-80 max-w-lg my-12 mx-auto w-full"
+        className="m-auto w-full max-w-[90dvw] min-w-80"
         onSubmit={form.handleSubmit(onSubmit)}
       >
         {children}
