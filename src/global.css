@@ -99,6 +99,19 @@
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-highlight: var(--text-highlight);
+
+  /* Animations */
+  --animate-modal: modal 0.2s ease-in-out;
+  @keyframes modal {
+    0% { 
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% { 
+      opacity: 1; 
+      transform: scale(1); 
+    }
+  }
 }
 @layer base {
   html {
