@@ -57,5 +57,3 @@ export const Modal = ({ isOpen, onClose, children }: IProps) => {
     document.body,
   );
 };
-
-// export default Modal;
