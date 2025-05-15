@@ -12,3 +12,5 @@ export { CheckboxField } from "./inputs/CheckboxField";
 export { TextArea } from "./inputs/TextArea";
 export { FileField } from "./inputs/FileField";
 export { ThemeSwitcher } from "./theme/ThemeSwitcher";
+
+export { Modal } from "./modal/Modal";
