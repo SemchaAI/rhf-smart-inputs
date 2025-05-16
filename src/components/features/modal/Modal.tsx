@@ -35,7 +35,7 @@ export const Modal = ({ isOpen, onClose, children }: IProps) => {
       <div className="absolute inset-0 bg-black/50" onClick={onClose} />
       <div
         role="dialog"
-        className="relative z-10 h-fit max-h-[80dvh] w-fit min-w-[320px] animate-modal rounded-xl bg-background p-4 pt-8 shadow-lg"
+        className="relative z-10 h-fit max-h-[80dvh] w-fit min-w-[320px] animate-modal rounded-xl bg-background p-2 pt-8 shadow-lg"
       >
         <button
           type="button"
@@ -49,7 +49,7 @@ export const Modal = ({ isOpen, onClose, children }: IProps) => {
         </button>
 
         {/* Scrollable Content  pr-2*/}
-        <div className="max-h-[calc(80dvh-64px)] overflow-y-auto">
+        <div className="mt-2.5 max-h-[calc(80dvh-64px)] overflow-y-auto p-2 pt-0">
           {children}
         </div>
       </div>
