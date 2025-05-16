@@ -9,4 +9,9 @@ export interface IUserFormProps {
   type: ActionType.Create | ActionType.Update;
   formData?: Partial<userBaseSchema>;
   onClose?: () => void;
+
+  subjectOptions?: {
+    value: number | string;
+    label: string;
+  }[];
 }
