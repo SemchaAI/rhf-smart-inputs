@@ -1,4 +1,3 @@
-"use client";
 import { useFormContext, useWatch } from "react-hook-form";
 import { Eye, EyeOff, X } from "lucide-react";
 import { Input } from "@/components/shared";
@@ -42,7 +41,7 @@ export const FieldUnmaskedInput = ({
         <Input
           type={currType}
           id={id}
-          className="w-full pt-2.5 pr-5 pb-2.5 pl-10 focus:border-primary-action"
+          className="w-full pt-2.5 pr-8 pb-2.5 pl-10 focus:border-primary-action"
           placeholder={placeholder}
           autoComplete={autoComplete}
           {...register(id)}
