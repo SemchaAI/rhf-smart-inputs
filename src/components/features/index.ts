@@ -1,10 +1,12 @@
 export { BurgerMenu } from "./burger/BurgerMenu";
-export {
-  MultiSelect,
-  type Option,
-  type MultiSelectProps,
-} from "./selects/MultiSelect";
+
+export { MultiSelect } from "./selects/MultiSelect";
 export { MultiSelectField } from "./selects/MultiSelectField";
+export type { Option, MultiSelectProps } from "./selects/MultiSelect";
+
+export { Select } from "./selects/Select";
+export { SelectField } from "./selects/SelectField";
+
 export { FieldInput } from "./inputs/FieldInput";
 export { FieldUnmaskedInput } from "./inputs/FieldUnmaskedInput";
 export { RadioFieldList } from "./inputs/RadioFieldList";
