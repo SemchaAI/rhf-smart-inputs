@@ -25,4 +25,8 @@ export const HeaderNav = [
     name: "File input",
     href: ROUTES.ADMIN_PRODUCTS,
   },
+  {
+    name: "Modals/Select",
+    href: ROUTES.SIMPLE_INPUTS,
+  },
 ];
