@@ -1,4 +1,11 @@
 import { z } from "zod";
+
+//tmp in real proj we need to get from DB or have somewhere in config
+export enum UserSex {
+  MALE = "MALE",
+  FEMALE = "FEMALE",
+}
+
 export const UserBaseSchema = z.object({
   name: z
     .string()
@@ -18,6 +25,8 @@ export const UserBaseSchema = z.object({
     .min(10, { message: "Phone must be at least 10 characters long" })
     .optional()
     .or(z.literal("")),
-  birthday: z.date().optional(),
+  birthday: z.coerce.date().optional(),
+  sex: z.enum([UserSex.MALE, UserSex.FEMALE], { message: "Sex is required" }),
+  subjects: z.array(z.string()).optional(),
 });
 export type userBaseSchema = z.infer<typeof UserBaseSchema>;
