@@ -105,7 +105,7 @@ export const Select: React.FC<ISelectProps> = ({
       .replace(/\s/g, "")
       .includes(search.toLowerCase().replace(/\s/g, "")),
   );
-  console.log("isEmpty", isEmpty);
+
   return (
     <div
       ref={selectRef}
