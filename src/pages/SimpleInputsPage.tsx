@@ -22,14 +22,14 @@ export default function SimpleInputsPage() {
   const [selectedOption, setSelectedOption] = useState<
     IOption[] | IOption | undefined
   >([{ label: "Option 1", value: "option-1" }]);
-  // const formData = {
-  //   name: "name",
-  //   firstName: "firstName",
-  //   lastName: "lastName",
-  //   email: "email@examle.com",
-  //   phone: "+373 00 00 00",
-  //   birthday: new Date(),
-  // };
+  const formData = {
+    name: "name",
+    firstName: "firstName",
+    lastName: "lastName",
+    email: "email@examle.com",
+    phone: "+373 00 00 00",
+    birthday: new Date(),
+  };
   return (
     <section className="flex grow">
       <Container>
@@ -56,7 +56,7 @@ export default function SimpleInputsPage() {
                 />
               }
               type={ActionType.Create}
-              // formData={formData}
+              formData={formData}
             />
           </div>
         </div>
